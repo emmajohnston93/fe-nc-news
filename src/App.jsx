@@ -3,6 +3,7 @@ import Articles from './Articles';
 import Users from './Users';
 import Comments from './Comments';
 import Home from './Home';
+import SingleArticle  from './SingleArticle';
 import { Route, Routes, Link } from "react-router-dom"
 import './App.css'
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/articles" element={<Articles />} />
         <Route path="/users" element={<Users />} />
         <Route path="/comments" element={<Comments />} />
+        <Route path="/articles/:article_id" element ={<SingleArticle />} />
     </Routes>
 </div>
     )
