@@ -18,3 +18,12 @@ export function getArticles() {
     }
 
 
+    export function getComments(article_id) {
+      return ncNewsApi.get(`/articles/${article_id}/comments`).then((body) => {
+      return body.data.comments
+  
+      })   
+  
+      }
+
+
