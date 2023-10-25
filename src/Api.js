@@ -26,4 +26,10 @@ export function getArticles() {
   
       }
 
+  export function addVote(article_id, votes) {
+    return ncNewsApi.patch(`/articles/${article_id}`, {inc_votes: votes}).then((body) => {
+      return body.data.article.votes
+    })
+  }    
+
 

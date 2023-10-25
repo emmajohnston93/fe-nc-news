@@ -6,7 +6,7 @@ function Comments() {
     const { article_id } = useParams();
     const [comments, setComments] = useState ([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [isError, setIsError] = useState(null)
+    const [isError, setIsError] = useState(false)
 
     useEffect(() => {
         getComments(article_id).then((commentsFromApi) => {
@@ -14,7 +14,7 @@ function Comments() {
          setIsLoading(false);
 })
 .catch((err) => {
-setIsError(err);
+setIsError(true);
 setIsLoading(false)
 })
 
@@ -25,7 +25,7 @@ return <div>Won't be long, just loading...</div>
 }
 
 if (isError)
-return <div>Error: {error.message} </div>
+return <div>Error: Something went wrong </div>
 
      return (
 
