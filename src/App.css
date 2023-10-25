@@ -63,6 +63,16 @@ h3 {
 
 }
 
+.voter-button {
+ margin-bottom: 20px; 
+}
+
+
+.voter-button:hover {
+  background-color: rgb(70, 129, 70);
+}
+
+
 
 
 img {

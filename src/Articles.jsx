@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Articles() {
 const [articles, setArticles] = useState([]);
 const [isLoading, setIsLoading] = useState(true);
-const [isError, setIsError] = useState(null)
+const [isError, setIsError] = useState(false)
 
 useEffect(() => {
     getArticles().then((articlesFromApi) => {
@@ -14,7 +14,7 @@ useEffect(() => {
     setIsLoading(false);
     })
     .catch((err) => {
-        setIsError(err);
+        setIsError(true);
         setIsLoading(false)
     })
 
@@ -25,7 +25,7 @@ if (isLoading) {
 }
 
 if (isError)
-return <div>Error: {error.message} </div>
+return <div>Error: Something went wrong </div>
 
 return (
     <div>
