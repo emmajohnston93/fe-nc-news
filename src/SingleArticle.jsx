@@ -3,14 +3,15 @@ import { getSingleArticle } from "./Api";
 import { useState, useEffect } from "react";
 import Comments from "./Comments";
 import Voter from "./Voter";
+import NewComment from "./New-comment";
 
-function SingleArticle() {
+function SingleArticle({loggedInUser}) {
     const { article_id } = useParams();
     const [singleArticle, setSingleArticle] = useState ([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
     const [currentVotes, setVotes] = useState(0);
-console.log(currentVotes, "current votes")
+    const [comments, setComments] = useState ([]);
 useEffect(() => {
 getSingleArticle(article_id).then((singleArticleFromApi) => {
  setSingleArticle(singleArticleFromApi);
@@ -39,10 +40,11 @@ return (
       <p>Author: {singleArticle.author}</p>
       <p>{singleArticle.body}</p>
       <p>Votes: {singleArticle.votes + currentVotes}</p>
-      <Voter voter={Voter} article_id={article_id} currentVotes={currentVotes} setVotes={setVotes} />
+      <Voter article_id={article_id} currentVotes={currentVotes} setVotes={setVotes} />
       <img src={singleArticle.article_img_url} />
-      <h3>Comments for this article..</h3>
-     <Comments comments={Comments} />
+      <h3>Comments for this article! add yours...</h3>
+      <NewComment article_id={article_id} setComments={setComments} loggedInUser={loggedInUser} />
+     <Comments comments={comments} setComments={setComments} />
 
     </div>
 
