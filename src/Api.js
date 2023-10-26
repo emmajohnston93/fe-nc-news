@@ -32,4 +32,18 @@ export function getArticles() {
     })
   }    
 
+  export function addComment(article_id, commentAuthor, commentBody ) {
+    return ncNewsApi.post(`/articles/${article_id}/comments`, {username: commentAuthor, body: commentBody}).then((body) => {
+     console.log(body.data)
+      return body.data.comment
+    })
+  }    
+
+  export function getUsers() {
+  return ncNewsApi.get('/users').then((body) => {
+    return body.data.users
+  })  
+  }
+
+
 

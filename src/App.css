@@ -7,15 +7,43 @@ font-family: Arial, Helvetica, sans-serif;
 color: black ;
 text-align: center;
 padding: 20px;
+border-bottom: 2px solid #dcbcaf;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+font-size: 60px;
+background-size: contain;
+background-repeat:round;
+background-position: center center;
+background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://www.dynamonortheast.co.uk/wp-content/uploads/2022/08/Northcoders-Primary-Logo-Red-4.jpg');
 }
+
+
 
 .nav {
     font-family: Arial, Helvetica, sans-serif;
-    border: solid 1px black;
+    border: solid 1px #ba9181;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
+    background-color:#dcbcaf;
+    color: #ba9181;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  margin: 0 10px; 
+}
+
+h2 {
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+font-size: 30px;
+}
+
+  .nav a:hover {
+    text-decoration: underline; 
+
 }
 
 .article-card{

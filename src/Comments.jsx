@@ -2,9 +2,8 @@ import { useParams } from "react-router-dom";
 import { getComments } from "./Api";
 import { useState, useEffect } from "react";
 
-function Comments() {
+function Comments({comments, setComments}) {
     const { article_id } = useParams();
-    const [comments, setComments] = useState ([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false)
 
@@ -37,6 +36,7 @@ return <div>Error: Something went wrong </div>
                     <p> Author: {comment.author} </p>
                     <p> {comment.body} </p>
                     <p> Votes: {comment.votes} </p>
+
                 </li>
             })}
         </ul>
