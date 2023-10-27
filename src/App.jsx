@@ -22,7 +22,7 @@ function App() {
         <Link to="/">Home</Link> | <Link to="/articles">All Articles</Link> |  <Link to="/users">User</Link>
     </nav>
     < User loggedInUser={loggedInUser}/>
-    <h1 className='header'>NC News</h1>
+    <h1 alt="The background of this header is the Northcoders logo" className='header'>NC News</h1>
    
 
     <Routes>

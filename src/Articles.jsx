@@ -46,7 +46,7 @@ return (
         <ul className='article-list'>
             {articles.map((article) => {
                 return <li className='article-card' key={article.article_id}>
-                    <img src={article.article_img_url} />
+                    <img alt="an image relating to this article title" src={article.article_img_url} />
                     <Link to={`/articles/${article.article_id}`}>
                     <h3>{article.title} </h3>
                     </Link>

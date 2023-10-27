@@ -12,7 +12,7 @@ function TopicsDropdown({setSelectedTopic}) {
     return (
         <div>
 <p> Select a topic: </p>
-<select name="topics" id="topics" onChange={(event) => {
+<select className="topic-dropdown" name="topics" id="topics" onChange={(event) => {
 setSelectedTopic(event.target.value)
 }}>
    <option value=''> all </option> 
