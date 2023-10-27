@@ -14,11 +14,13 @@ if (hasVoted) {vote = 0}
 setVotes(vote)
 addVote(article_id, vote? 1 : -1).catch((err) => {
     setIsError(true);
-setHasVoted((hasVoted) => {
-return !hasVoted
-}) 
 
-}) }
+}) 
+setHasVoted((hasVoted) => {
+    return !hasVoted
+    }) 
+
+}
 
     
 return(

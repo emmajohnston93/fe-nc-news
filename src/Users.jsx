@@ -16,7 +16,7 @@ setUsers(users)
 }) 
  })  
  return <ul>
-    {users.map((user) => { return <li><button onClick={handleClick} value={user.username}> {user.username} </button></li>
+    {users.map((user) => { return <li className="users-list"><button  className="users-button" onClick={handleClick} value={user.username}> {user.username} </button></li>
     })}
  </ul> 
 }
