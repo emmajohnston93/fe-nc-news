@@ -41,7 +41,7 @@ return (
       <p>{singleArticle.body}</p>
       <p>Votes: {singleArticle.votes + currentVotes}</p>
       <Voter article_id={article_id} currentVotes={currentVotes} setVotes={setVotes} />
-      <img src={singleArticle.article_img_url} />
+      <img alt="an image relating to your selected article" src={singleArticle.article_img_url} />
       <h3>Comments for this article! add yours...</h3>
       <NewComment article_id={article_id} setComments={setComments} loggedInUser={loggedInUser} />
      <Comments comments={comments} setComments={setComments} />
