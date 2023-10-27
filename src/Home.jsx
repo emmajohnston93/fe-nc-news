@@ -1,7 +1,7 @@
 function Home() {
 return (
         <h2>
-           Welcome 
+          Welcome! Here's the most recent articles
         </h2>
 )
     

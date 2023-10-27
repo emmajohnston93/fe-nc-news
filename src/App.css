@@ -1,5 +1,5 @@
 body {
- background-color: #ba9181;  
+ background-color: #CFB095;  
 }
 
 .header {
@@ -7,7 +7,7 @@ font-family: Arial, Helvetica, sans-serif;
 color: black ;
 text-align: center;
 padding: 20px;
-border-bottom: 2px solid #dcbcaf;
+border-bottom: 2px solid #CFB095;
 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 font-size: 60px;
 background-size: contain;
@@ -20,13 +20,13 @@ background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 
 
 .nav {
     font-family: Arial, Helvetica, sans-serif;
-    border: solid 1px #ba9181;
+    border: solid 1px #FFE4C4;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
-    background-color:#dcbcaf;
-    color: #ba9181;
+    background-color: #FFE4C4;
+    color: #FFE4C4;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -47,8 +47,8 @@ font-size: 30px;
 }
 
 .article-card{
-  border: 3px solid #dcbcaf;  
-  background-color: #dcbcaf;
+  border: 3px solid #FFE4C4;  
+  background-color: #FFE4C4;
   margin : 20px;
   padding: 20px;
   display: flex;
@@ -65,9 +65,13 @@ h3 {
 
 }
 
+.logged-in-user{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .comment-card{
-  border: 3px solid #ba9181;   
-  background-color: #dcbcaf;
+  border: 3px solid #CFB095;   
+  background-color: #CFB095;
   margin : 20px;
   padding: 20px;
   display: flex;
@@ -79,8 +83,8 @@ h3 {
 }
 
 .singleArticle-card {
-  border: 3px solid #dcbcaf;  
-  background-color: #dcbcaf;
+  border: 3px solid #FFE4C4;  
+  background-color: #FFE4C4;
   margin : 20px;
   padding: 20px;
   display: flex;
@@ -101,9 +105,27 @@ h3 {
 }
 
 
-
-
 img {
     height: 30%;
     width: 30%;
 }
+
+.users-list {
+ list-style-type: none; 
+}
+
+.users-button {
+  padding: 10px;
+  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFE4C4;
+}
+
+.users-button:hover {
+  background-color: rgb(70, 129, 70);
+}
+
+p {
+ font-family:  Arial, Helvetica, sans-serif;
+}
+

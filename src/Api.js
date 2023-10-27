@@ -3,7 +3,7 @@ import axios from "axios";
 const ncNewsApi = axios.create({baseURL: 'https://be-nc-news-ncnt.onrender.com/api'})
 
 export function getArticles() {
-    return ncNewsApi.get('/articles').then((body) => {
+    return ncNewsApi.get('/articles/').then((body) => {
   return body.data.articles
     })
    
@@ -45,5 +45,9 @@ export function getArticles() {
   })  
   }
 
-
-
+  export function getArticlesByTopic() {
+    return ncNewsApi.get('/topics').then((body) => {
+      return body.data.topics
+        })
+       
+        }    

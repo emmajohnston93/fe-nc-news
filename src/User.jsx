@@ -2,7 +2,7 @@
 function User({loggedInUser}) {
 
 return <div>
-    <p> {`Logged in as: ${loggedInUser}`} </p>
+    <p className="logged-in-user"> {`👤 Logged in as: ${loggedInUser}`} </p>
 </div>
 
 }

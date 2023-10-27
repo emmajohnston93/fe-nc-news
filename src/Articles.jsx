@@ -1,16 +1,27 @@
 import { getArticles } from './Api'
 import { useEffect, useState } from "react"
 import { Link } from 'react-router-dom';
+import TopicsDropdown from './Topics'
 
 
-function Articles() {
+function Articles({selectedTopic, setSelectedTopic}) {
 const [articles, setArticles] = useState([]);
 const [isLoading, setIsLoading] = useState(true);
 const [isError, setIsError] = useState(false)
 
 useEffect(() => {
     getArticles().then((articlesFromApi) => {
-    setArticles(articlesFromApi);
+    if (selectedTopic) {
+    const filteredArticles = articlesFromApi.filter((article) =>{     
+        console.log(selectedTopic)
+    return article.topic === selectedTopic
+    })
+    console.log(filteredArticles)
+    setArticles(filteredArticles)
+    }  else {
+
+setArticles(articlesFromApi);
+    }
     setIsLoading(false);
     })
     .catch((err) => {
@@ -18,7 +29,9 @@ useEffect(() => {
         setIsLoading(false)
     })
 
-}, [])
+}, [selectedTopic])
+
+
 
 if (isLoading) {
     return <div>Won't be long, just loading...</div>
@@ -29,8 +42,7 @@ return <div>Error: Something went wrong </div>
 
 return (
     <div>
-
-
+< TopicsDropdown setSelectedTopic={setSelectedTopic}  />
         <ul className='article-list'>
             {articles.map((article) => {
                 return <li className='article-card' key={article.article_id}>
